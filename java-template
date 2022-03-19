@@ -1,8 +1,3 @@
-/**
-* Author: Vedant Wankhade
-* Date: 03-20-2022
-*/
-
 import java.io.File;
 import java.io.PrintStream;
 import java.util.Scanner;
