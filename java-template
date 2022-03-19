@@ -8,7 +8,7 @@ class Solution {
 	static boolean ONLINE_JUDGE;
 	static boolean TEST_CASES;
 	static boolean DEBUG;
-	static boolean INF_TEST_CASES;
+	static boolean INFINITE_TEST_CASES;
 	static PrintStream out;
 	static Scanner in;
 
