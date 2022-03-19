@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 
-// #define DEBUG
-// #define TEST_CASES
+static bool TEST_CASES;
+static bool DEBUG;
+static bool INFINITE_TEST_CASES;
 
 using namespace std;
 
@@ -9,20 +10,29 @@ void solve(int T);
 
 int main() {
 
+    // Uncomment following as needed
+
+    // TEST_CASES = true;
+    // DEBUG = true;
+    // INFINITE_TEST_CASES = !TEST_CASES;
+
+    // -------------------------------
+
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
 
-    int T = 1;
+    int T, _T;
 
-    #ifdef TEST_CASES
-        cin >> T;
-    #endif
-
-    int _T = T;
-
-    while (_T--) solve(T - _T);
+    if (INFINITE_TEST_CASES) {
+        T = _T = -1;
+        while (!cin.eof()) { solve(T - _T + 1); _T--; };
+    } else {
+        TEST_CASES ? cin >> T : (T = 1, cin);
+        _T = T;
+        while ((_T--) > 0) solve(T - _T);
+    }
 
     return 0;
 }
@@ -35,5 +45,5 @@ void solve(int T) {
     
     // Write code here
 
-    
+
 }
