@@ -42,7 +42,7 @@ class Solution {
 		
 		int T, _T;
 
-		if (INF_TEST_CASES) {
+		if (INFINITE_TEST_CASES) {
 			T = _T = -1;
 			while (in.hasNext()) { solve(T - _T + 1); _T--; };
 		} else {
