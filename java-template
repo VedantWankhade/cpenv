@@ -13,6 +13,7 @@ class Solution {
 	static boolean ONLINE_JUDGE;
 	static boolean TEST_CASES;
 	static boolean DEBUG;
+	static boolean INF_TEST_CASES;
 	static PrintStream out;
 	static Scanner in;
 
@@ -22,8 +23,9 @@ class Solution {
 		// -----------------------------------------------------
 		
 		// ONLINE_JUDGE = true;
-		TEST_CASES = true;
-		DEBUG = true;
+		// TEST_CASES = true;
+		// DEBUG = true;
+		// INFINITE_TEST_CASES = !TEST_CASES;
 
 		// -----------------------------------------------------
 
@@ -43,9 +45,15 @@ class Solution {
 
 	public static void main(String[] args) {
 		
-		int T, _T; T = _T = TEST_CASES ? Integer.parseInt(in.nextLine()) : 1;
+		int T, _T;
 
-		while ((_T--) > 0) solve(T - _T);
+		if (INF_TEST_CASES) {
+			T = _T = -1;
+			while (in.hasNext()) { solve(T - _T); _T--; };
+		} else {
+			T = _T = TEST_CASES ? Integer.parseInt(in.nextLine()) : 1;
+			while ((_T--) != 0) solve(T - _T);
+		}
 	}
 
 	public static void solve(int T) {
@@ -54,6 +62,6 @@ class Solution {
 
 		// Write solution here
 
-
+		
 	}
 }
