@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+// #define DEBUG
+// #define TEST_CASES
+
+using namespace std;
+
+void solve(int T);
+
+int main() {
+
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+
+    int T = 1;
+
+    #ifdef TEST_CASES
+        cin >> T;
+    #endif
+
+    int _T = T;
+
+    while (_T--) solve(T - _T);
+
+    return 0;
+}
+
+void solve(int T) {
+
+    #ifdef DEBUG
+        cout << "\n[For test case: " << T << "]\n";
+    #endif
+    
+    // Write code here
+
+    
+}
