@@ -39,9 +39,7 @@ int main() {
 
 void solve(int T) {
 
-    #ifdef DEBUG
-        cout << "\n[For test case: " << T << "]\n";
-    #endif
+    if (DEBUG) cout << "\n[For test case: " << T << "]\n";
     
     // Write code here
 
