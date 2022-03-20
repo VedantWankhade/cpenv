@@ -19,7 +19,7 @@ class Solution {
 		
 		// ONLINE_JUDGE = true;
 		// TEST_CASES = true;
-		// DEBUG = true;
+		DEBUG = true;
 		// INFINITE_TEST_CASES = !TEST_CASES;
 
 		// -----------------------------------------------------
@@ -44,19 +44,30 @@ class Solution {
 
 		if (INFINITE_TEST_CASES) {
 			T = _T = -1;
-			while (in.hasNext()) { solve(T - _T + 1); _T--; };
+			while (in.hasNext()) { 
+				if (DEBUG) out.println("\n[Test Case: " + (T - _T + 1) + "]");
+				final long start = System.currentTimeMillis();
+				solve();
+				final long stop = System.currentTimeMillis();
+				if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+				_T--; 
+			};
 		} else {
 			T = _T = TEST_CASES ? Integer.parseInt(in.nextLine()) : 1;
-			while ((_T--) != 0) solve(T - _T);
+			while ((_T--) != 0) {
+				if (DEBUG) out.println("\n[Test Case: " + (T - _T) + "]");
+				final long start = System.currentTimeMillis();
+				solve();
+				final long stop = System.currentTimeMillis();
+				if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+			}
 		}
 	}
 
-	public static void solve(int T) {
+	public static void solve() {
+
+		// Write solution here w/o taking number of test cases as input
 		
-		if (DEBUG) out.println("\n[For Test Case: " + T + "]");
-
-		// Write solution here
-
 		
 	}
 }
