@@ -19,7 +19,7 @@ class Solution {
 		
 		// ONLINE_JUDGE = true;
 		// TEST_CASES = true;
-		DEBUG = true;
+		// DEBUG = true;
 		// INFINITE_TEST_CASES = !TEST_CASES;
 
 		// -----------------------------------------------------
@@ -45,21 +45,25 @@ class Solution {
 		if (INFINITE_TEST_CASES) {
 			T = _T = -1;
 			while (in.hasNext()) { 
-				if (DEBUG) out.println("\n[Test Case: " + (T - _T + 1) + "]");
-				final long start = System.currentTimeMillis();
-				solve();
-				final long stop = System.currentTimeMillis();
-				if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+				if (DEBUG) {
+					out.println("\n[Test Case: " + (T - _T + 1) + "]");
+					final long start = System.currentTimeMillis();
+					solve();
+					final long stop = System.currentTimeMillis();
+					if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+				} else solve();
 				_T--; 
 			};
 		} else {
 			T = _T = TEST_CASES ? Integer.parseInt(in.nextLine()) : 1;
 			while ((_T--) != 0) {
-				if (DEBUG) out.println("\n[Test Case: " + (T - _T) + "]");
-				final long start = System.currentTimeMillis();
-				solve();
-				final long stop = System.currentTimeMillis();
-				if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+				if (DEBUG) {
+					out.println("\n[Test Case: " + (T - _T) + "]");
+					final long start = System.currentTimeMillis();
+					solve();
+					final long stop = System.currentTimeMillis();
+					if (DEBUG) out.println("[Took: " + (stop - start) + " ms]");
+				} else solve();
 			}
 		}
 	}
