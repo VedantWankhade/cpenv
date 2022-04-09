@@ -1,10 +1,14 @@
 #include <bits/stdc++.h>
 
+using namespace std;
+
+ios::sync_with_stdio(0);
+cin.tie(0);
+
 static bool TEST_CASES;
 static bool DEBUG;
 static bool INFINITE_TEST_CASES;
 
-using namespace std;
 
 void solve(int T);
 
