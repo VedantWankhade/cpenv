@@ -2,9 +2,6 @@
 
 using namespace std;
 
-ios::sync_with_stdio(0);
-cin.tie(0);
-
 typedef long long ll;
 typedef vector<int> vi;
 
@@ -26,6 +23,9 @@ int main() {
     // INFINITE_TEST_CASES = !TEST_CASES;
 
     // -------------------------------
+
+ios::sync_with_stdio(0);
+cin.tie(0);
 
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
