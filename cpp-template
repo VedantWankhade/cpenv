@@ -5,6 +5,11 @@ using namespace std;
 ios::sync_with_stdio(0);
 cin.tie(0);
 
+typedef long long ll;
+typedef vector<int> vi;
+
+#define REP(i, a, b) for (int i = a; i < b; i++)
+
 static bool TEST_CASES;
 static bool DEBUG;
 static bool INFINITE_TEST_CASES;
@@ -14,7 +19,7 @@ void solve(int T);
 
 int main() {
 
-    // Uncomment following as needed
+    // Uncomment following as needed    
 
     // TEST_CASES = true;
     // DEBUG = true;
