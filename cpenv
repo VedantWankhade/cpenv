@@ -74,7 +74,7 @@ function add_meta_info {
 function create_cpp_env {
 
     echo "Creating C++ CP env..."
-    cp /home/vedant/cpenv/cpp-template ./${PROBLEM_NAME}.cpp
+    cp ~/.cpenv/cpp-template ./${PROBLEM_NAME}.cpp
     # sed -i "s/Solution/$PROBLEM_NAME/" ./${PROBLEM_NAME}.cpp 
 
     add_meta_info "cpp" 
@@ -86,7 +86,7 @@ function create_cpp_env {
 function create_java_env {
 
     echo "Creating Java CP env..."
-    cp /home/vedant/cpenv/java-template ./${PROBLEM_NAME}.java
+    cp ~/.cpenv/java-template ./${PROBLEM_NAME}.java
     sed -i "s/Solution/$PROBLEM_NAME/" ./${PROBLEM_NAME}.java 
 
     add_meta_info "java"
